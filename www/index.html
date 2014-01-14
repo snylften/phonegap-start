@@ -1,47 +1,166 @@
+
 <!DOCTYPE html>
-<!--
-    Licensed to the Apache Software Foundation (ASF) under one
-    or more contributor license agreements.  See the NOTICE file
-    distributed with this work for additional information
-    regarding copyright ownership.  The ASF licenses this file
-    to you under the Apache License, Version 2.0 (the
-    "License"); you may not use this file except in compliance
-    with the License.  You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing,
-    software distributed under the License is distributed on an
-    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-     KIND, either express or implied.  See the License for the
-    specific language governing permissions and limitations
-    under the License.
--->
 <html>
-    <head>
-        <meta charset="utf-8" />
-        <meta name="format-detection" content="telephone=no" />
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
-        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
-        <title>Infrakontroll</title>
-    </head>
-    <body>
-            <a href="https://online.infracontrol.com/Public/Issue/Create?system=Uddevalla%20kommun&alias=Default" class="btn btn-default btn-lg">Infracontroll</a>
-<!--
-        <div class="app">
-            <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
-                <p class="event received">Device is ok</p>
-            </div>
-        </div>
-        -->
-        <script type="text/javascript" src="phonegap.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
-        <script type="text/javascript" src="js/bootstrap.min.js"></script>
-<!--
-        <script type="text/javascript">
-            app.initialize();
-        </script>-->
+  <head>
+    <title>Uddevalla kommun</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
 
-    </body>
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="../../assets/js/html5shiv.js"></script>
+      <script src="../../assets/js/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+
+<div class="container">
+
+<form class="form-horizontal" action="connector.php" method="post">
+<fieldset>
+
+<!-- Form Name -->
+<legend>Ans&ouml;kan om kontantst&ouml;d</legend>
+
+<!-- Text input-->
+<div class="form-group required-control">
+  <label class="col-md-3 control-label" for="student_f_name">F&ouml;rnamn</label>
+  <div class="col-md-6">
+    <input id="student_f_name" name="student_f_name" type="text" placeholder="F&ouml;rnamn" class="form-control" required>
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group required-control">
+  <label class="col-md-3 control-label" for="student_l_name">Efternamn</label>
+  <div class="col-md-6">
+    <input id="student_l_name" name="student_l_name" type="text" placeholder="Efternamn" class="form-control" required>    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group required-control">
+  <label class="col-md-3 control-label" for="social_securitynumber">Personnummer</label>
+  <div class="col-md-6">
+    <input id="social_securitynumber" name="social_securitynumber" type="text" placeholder="Personnummer ÅÅMMDDNNNN" class="form-control " required>
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group required-control">
+  <label class="col-md-3 control-label" for="phone">Telefonnummer</label>
+  <div class="col-md-6">
+    <input id="phone" name="phone" type="text" placeholder="Telefonnummer" class="form-control " required>
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group required-control">
+  <label class="col-md-3 control-label" for="email">E-post</label>
+  <div class="col-md-6">
+    <input id="email" name="email" type="text" placeholder="E-post" class="form-control " required>
+    
+  </div>
+</div>
+
+<!-- Multiple Radios -->
+<div class="form-group">
+  <label class="col-md-3 control-label" for="inackord">Inackorderingsst&ouml;d</label>
+  <div class="col-lg-6">
+  <div class="radio">
+    <label for="inackord-0">
+      <input type="radio" name="inackord" id="inackord-0" value="Jag har s&ouml;kt inackorderingsst&ouml;d" checked="checked">
+      Jag har s&ouml;kt inackorderingsst&ouml;d
+    </label></div>
+  <div class="radio">
+    <label for="inackord-1">
+      <input type="radio" name="inackord" id="inackord-1" value="Jag har inte s&ouml;kt inackorderingsst&ouml;d">
+      Jag har inte s&ouml;kt inackorderingsst&ouml;d
+    </label></div>
+  </div>
+</div>
+
+<!-- Select Basic -->
+<div class="form-group">
+  <label class="col-md-3 control-label" for="bank">Bank</label>
+  <div class="col-md-6">
+    <select id="bank" name="bank" class="form-control ">
+      <option>SEB</option>
+      <option>Handelsbanken</option>
+      <option>Swedbank</option>
+      <option>Nordea</option>
+      <option>Länsf&ouml;rsäkringar Bank</option>
+      <option>Skandiabanken</option>
+      <option>GE Money Bank (Sverige)</option>
+      <option>Volvofinans Bank</option>
+      <option>Färs &amp; Frosta Sparbank</option>
+      <option>Swedbank Sjuhärad</option>
+      <option>Ikano Bank</option>
+      <option>HQ Bank</option>
+      <option>Carnegie Investment Bank</option>
+      <option>ICA Banken</option>
+      <option>Kaupthing Bank Sverige[3]</option>
+      <option>Sparbanken Gripen</option>
+      <option>Avanza</option>
+      <option>Nordnet Bank</option>
+      <option>Varbergs Sparbank</option>
+      <option>Resurs Bank</option>
+      <option>Sparbanken Skaraborg</option>
+      <option>EFG Bank</option>
+      <option>Eskilstuna Rekarne Sparbank</option>
+      <option>Sparbanken Lidk&ouml;ping</option>
+      <option>Bergslagens Sparbank</option>
+      <option>Tjustbygdens Sparbank</option>
+      <option>Sparbanken Eken</option>
+      <option>Forex Bank</option>
+      <option>Ölands Bank[4]</option>
+      <option>MedMera Bank</option>
+      <option>Sparbanken G&ouml;inge</option>
+      <option>Erik Penser Bankaktiebolag</option>
+      <option>Bank2</option>
+      <option>Vimmerby Sparbank</option>
+    </select>
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group required-control">
+  <label class="col-md-3 control-label" for="clearing">Clearingnummer</label>
+  <div class="col-md-6">
+    <input id="clearing" name="clearing" type="text" placeholder="Clearingnummer" class="form-control " required>
+    <p class="help-block">Swedbank har 5 siffror, &ouml;vriga banker har 4</p>
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group required-control">
+  <label class="col-md-3 control-label" for="accountnumber">Kontonummer</label>
+  <div class="col-md-6">
+    <input id="accountnumber" name="accountnumber" type="text" placeholder="Kontonummer" class="form-control " required>
+    <p class="help-block">Enbart sifrror. Ej punkter eller streck</p>
+  </div>
+</div>
+
+<!-- Button -->
+<div class="form-group">
+  <label class="col-md-3 control-label" for="send_button"></label>
+  <div class="col-lg-6">
+    <button id="send_button" name="send_button" class="btn btn-success">Skicka in</button>
+  </div>
+</div>
+
+</fieldset>
+
+</form>
+
+</div> <!-- CONTAINER -->
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="js/bootstrap.min.js"></script>
+  </body>
 </html>
